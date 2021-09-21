@@ -35,7 +35,7 @@ The Method should return true or false depending on search success.
 -   Add a Method that deletes a wine with a certain name. The Method should return
 true or false depending on search success.
 
-###Report:
+### Report:
 -   Hand in your group work with the names and participants in the group mentioned as
 comments in the code at the deadline given. Hand in either as zip file or as a git link
 repository.
