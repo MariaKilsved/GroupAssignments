@@ -1,0 +1,16 @@
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\bin\Debug\net5.0\GroupAssignment1.exe
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\bin\Debug\net5.0\GroupAssignment1.deps.json
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\bin\Debug\net5.0\GroupAssignment1.runtimeconfig.json
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\bin\Debug\net5.0\GroupAssignment1.runtimeconfig.dev.json
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\bin\Debug\net5.0\GroupAssignment1.dll
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\bin\Debug\net5.0\ref\GroupAssignment1.dll
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\bin\Debug\net5.0\GroupAssignment1.pdb
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\GroupAssignment1.csproj.AssemblyReference.cache
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\GroupAssignment1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\GroupAssignment1.AssemblyInfoInputs.cache
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\GroupAssignment1.AssemblyInfo.cs
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\GroupAssignment1.csproj.CoreCompileInputs.cache
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\GroupAssignment1.dll
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\ref\GroupAssignment1.dll
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\GroupAssignment1.pdb
+C:\Users\maria\Source\Repos\GroupAssignments\GroupAssignment1\obj\Debug\net5.0\GroupAssignment1.genruntimeconfig.cache
