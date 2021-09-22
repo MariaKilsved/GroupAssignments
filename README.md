@@ -15,18 +15,18 @@ instead be written.
 
 The code in Main() should generate below output to the console.
 
-  My cellar can have maximum 4 bottles
-  Added to my cellar: Wine 2000 Château Lafite Rothschild is made of CabernetSauvignon from Bordeaux
-  Added to my cellar: Wine 2010 Domaine de la Romanée-Conti is made of PinotNoir from Burgundy
-  Added to my cellar: Wine 2005 Giuseppe Quintarelli Amarone is made of Corvina from Veneto
-  Added to my cellar: Wine 2008 Sierra Cantabria is made of Tempranillo from RiberaDelDuero
-  Could NOT add to my cellar: Wine 1992 Screaming Eagle is made of Cabernet Sauvignon from RiberaDelDuero
+    My cellar can have maximum 4 bottles
+    Added to my cellar: Wine 2000 Château Lafite Rothschild is made of CabernetSauvignon from Bordeaux
+    Added to my cellar: Wine 2010 Domaine de la Romanée-Conti is made of PinotNoir from Burgundy
+    Added to my cellar: Wine 2005 Giuseppe Quintarelli Amarone is made of Corvina from Veneto
+    Added to my cellar: Wine 2008 Sierra Cantabria is made of Tempranillo from RiberaDelDuero
+    Could NOT add to my cellar: Wine 1992 Screaming Eagle is made of Cabernet Sauvignon from RiberaDelDuero
   
-  My cellar has 4 wines:
-  Wine 2000 Château Lafite Rothschild is made of CabernetSauvignon from Bordeaux
-  Wine 2010 Domaine de la Romanée-Conti is made of PinotNoir from Burgundy
-  Wine 2005 Giuseppe Quintarelli Amarone is made of Corvina from Veneto
-  Wine 2008 Sierra Cantabria is made of Tempranillo from RiberaDelDuero
+    My cellar has 4 wines:
+    Wine 2000 Château Lafite Rothschild is made of CabernetSauvignon from Bordeaux
+    Wine 2010 Domaine de la Romanée-Conti is made of PinotNoir from Burgundy
+    Wine 2005 Giuseppe Quintarelli Amarone is made of Corvina from Veneto
+    Wine 2008 Sierra Cantabria is made of Tempranillo from RiberaDelDuero
 
 ### Challenge (if you like to try):
 -   Add a Method that search for the first wine whose name contains a certain string.
