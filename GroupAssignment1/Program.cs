@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*====                 GroupAssignment1               =====/*
+/*===== Maria Kilsved, Jenny Dyews och Ghasem Soltani =====*/
+
+using System;
 
 namespace GroupAssignment1
 {
@@ -61,16 +64,18 @@ namespace GroupAssignment1
             PrintWines(myCellar);
 
             // Search for wine
-            if(SearchForAString(myCellar, out string word) == true)
+            do
             {
-                Console.WriteLine($"Wine {word} found.");
-            }
-            else
-            {
-                Console.WriteLine("Wine not found.");
-            }
+                bool search = SearchForAString(myCellar);
 
-            //Delete a wine
+                if (search == true)
+                {
+                    break;
+                }
+            } while (true);
+
+
+            //Delete a wine with a certain name
             Console.WriteLine();
             Console.WriteLine("Please delete a wine:");
             string wineToBeDeleted = Console.ReadLine();
@@ -148,21 +153,25 @@ namespace GroupAssignment1
         /// </summary>
         /// <param name="myCellar"></param>
         /// <returns>Bool for if the string was found</returns>
-        private static bool SearchForAString(Wine[] myCellar, out string word)
+        private static bool SearchForAString(Wine[] myCellar)
         {
 
             Console.WriteLine();
             Console.WriteLine("Please input your search word:");
-            word = Console.ReadLine();
+            // Using two variables in order to save the original search word for printing
+            string word = Console.ReadLine();
+            string wordFormatted = word.ToLower().Trim();
 
             for (int i = 0; i < myCellar.Length; i++)
             {
-                if (myCellar[i].Name != null && myCellar[i].Name.Contains(word))
+                if (myCellar[i].Name != null && myCellar[i].Name != "" && myCellar[i].Name.ToLower().Contains(wordFormatted))
                 {
+                    Console.WriteLine($"Wine {word} found.");
+                    Console.WriteLine(myCellar[i].StringToPrint()); 
                     return true;
                 }
             }
-
+            Console.WriteLine("Wine not found.");
             return false;
         }
 
