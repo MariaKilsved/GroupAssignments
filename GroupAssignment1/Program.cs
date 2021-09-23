@@ -4,12 +4,12 @@ namespace GroupAssignment1
 {
     public enum GrapeVariants
     {
-        CabernetSauvignon, PinotNoir, Corvina, Shiraz, Merlot, Chablis,
+        Null, CabernetSauvignon, PinotNoir, Corvina, Shiraz, Merlot, Chablis,
         Riesling, Tempranillo
     }
     public enum GrapeRegions
     {
-        Bordeaux, Burgundy, Veneto, Piedmonte, RiberaDelDuero,
+        Null, Bordeaux, Burgundy, Veneto, Piedmonte, RiberaDelDuero,
         NapaValley, Puglia, Pfalz
     }
     public struct Wine
@@ -59,6 +59,28 @@ namespace GroupAssignment1
             bOK = InsertWine(myCellar, wine5);
 
             PrintWines(myCellar);
+
+            // Search for wine
+            if(SearchForAString(myCellar, out string word) == true)
+            {
+                Console.WriteLine($"Wine {word} found.");
+            }
+            else
+            {
+                Console.WriteLine("Wine not found.");
+            }
+
+            //Delete a wine
+            Console.WriteLine();
+            Console.WriteLine("Please delete a wine:");
+            string wineToBeDeleted = Console.ReadLine();
+
+            Console.WriteLine();
+            bool delete = DeleteWine(myCellar, wineToBeDeleted, out string confirmationString);
+            Console.WriteLine(confirmationString);
+
+            PrintWines(myCellar);
+
         }
 
         /// <summary>
@@ -89,13 +111,15 @@ namespace GroupAssignment1
         private static void PrintWines(Wine[] myCellar)
         {
             Console.WriteLine();
-            Console.WriteLine($"My cellar has {myCellar.Length} wines:");
+            int nrOfBottles = NrOfBottles(myCellar);
+
+            Console.WriteLine($"My cellar has {nrOfBottles} wines:");
             for (int i = 0; i < myCellar.Length; i++)
             {
                 if (myCellar[i].Name != null)
                 {
                     Console.WriteLine(myCellar[i].StringToPrint());
-                };
+                }
 
             }
         }
@@ -111,12 +135,55 @@ namespace GroupAssignment1
             int nrBottles = 0;
             for (int i = 0; i < myCellar.Length; i++)
             {
-                if (myCellar[i].Year != null)
+                if (myCellar[i].Year != null && myCellar[i].Year != 9999)
                 {
                     nrBottles++;
-                };
+                }
             }
             return nrBottles;
         }
+
+        /// <summary>
+        /// Search for the first wine containing a certain string
+        /// </summary>
+        /// <param name="myCellar"></param>
+        /// <returns>Bool for if the string was found</returns>
+        private static bool SearchForAString(Wine[] myCellar, out string word)
+        {
+
+            Console.WriteLine();
+            Console.WriteLine("Please input your search word:");
+            word = Console.ReadLine();
+
+            for (int i = 0; i < myCellar.Length; i++)
+            {
+                if (myCellar[i].Name != null && myCellar[i].Name.Contains(word))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static bool DeleteWine(Wine[] myCellar, string name, out string confirmationString)
+        {
+            for (int i = 0; i < myCellar.Length; i++)
+            {
+                if (myCellar[i].Name != null && myCellar[i].Name == name)
+                {
+                    confirmationString = $"Wine {myCellar[i].Year} {myCellar[i].Name} made of {myCellar[i].Grape} from {myCellar[i].Region} was deleted!"; ;
+
+                    myCellar[i].Year = 9999;
+                    myCellar[i].Name = null;
+                    myCellar[i].Grape = GrapeVariants.Null;
+                    myCellar[i].Region = GrapeRegions.Null;
+                    return true;
+                }
+            }
+            confirmationString = $"Unable to delete {name}. {name} not found.";
+            return false;
+        }
+
     }
 }
